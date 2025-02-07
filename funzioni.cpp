@@ -17,8 +17,8 @@ void Datagram(){
 	campi.TTL ="01000000";
 	campi.Protocol ="00000110";
 	campi.Headerchecksum = "0000000000000000";
-	campi.SIA = "192.168.1.100";
-	campi.DIA = "192.168.1.101"; 
+	campi.SIA = "11000000101010000000000100001010";
+	campi.DIA = "00001000000010000000000000001000"; 
 }
 
 // Funzione per leggere il messaggio da un file
