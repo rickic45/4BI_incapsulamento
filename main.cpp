@@ -7,6 +7,10 @@ using namespace std;
 int main(){
     string messaggio = leggiMessaggio();
     string messaggioBin = messaggioToBin(messaggio);
-    scritturaMessaggio(messaggioBin);
+    IpHeader campi = Datagram(); 
+    string ToTframe = concatIpHeader(campi);
+    scritturaMessaggio(messaggioBin, ToTframe);
     return 0;
 }
+
+ 
