@@ -6,18 +6,18 @@ using namespace std;
 struct IpHeader{
 	string Version;
 	string Hlen;
-	int TOS;
+	string TOS;
 	string TOTlenght;
-	int ID;
+	string ID;
 	string Flags;
-	int Fragmentoffset;
+	string Fragmentoffset;
 	string TTL;
 	string Protocol;
-	int Headerchecksum;
-	long SIA;
-	long DIA;
+	string Headerchecksum;
+	string SIA;
+	string DIA;
 	string Options;
-	int Padding;
+	string Padding;
 };
 
 void Datagram();
