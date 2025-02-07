@@ -18,14 +18,25 @@ struct IpHeader{
 	string DIA;
 	string Options;
 	string Padding;
+	string Data;
 };
 
-void Datagram();
+struct EthernetFrame{
+	string Preamble;
+	string Sfd;
+	string Da;
+	string Sa;
+	string Type;
+	IpHeader ipHeader;
+};
+
+IpHeader Datagram();
 string leggiMessaggio();
-void scritturaMessaggio(string messaggioBin);
+void scritturaMessaggio(string messaggioBin, string ToTframe);
 string charToBin(char value);
 string stringToBin(string input);
 string messaggioToBin(string input);
-string calcolaCRC(const string &payload);
+string concatIpHeader(const IpHeader& header);
 
 #endif
+
