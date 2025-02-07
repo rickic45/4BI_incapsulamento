@@ -22,9 +22,10 @@ struct IpHeader{
 
 void Datagram();
 string leggiMessaggio();
-void scritturaMessaggio(string carattere, string stringa, string messaggioBin);
+void scritturaMessaggio(string messaggioBin);
 string charToBin(char value);
 string stringToBin(string input);
 string messaggioToBin(string input);
+string calcolaCRC(const string &payload);
 
 #endif
