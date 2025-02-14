@@ -9,7 +9,9 @@ int main(){
     string messaggioBin = messaggioToBin(messaggio);
     IpHeader campi = Datagram(); 
     string ToTframe = concatIpHeader(campi);
-    scritturaMessaggio(messaggioBin, ToTframe);
+    EthernetFrame campi1 = CreaFrame();
+    string ToTframelvl2 = concatFrameHeader(campi1);
+    scritturaMessaggio(ToTframelvl2);
     return 0;
 }
 
