@@ -94,8 +94,13 @@ string stringToBin(string input) {
 
 // Converte il messaggio in binario
 string messaggioToBin(string input) {
-    return stringToBin(input);
+    string result = "";
+    for (char c : input) {
+        result += charToBin(c);
+    }
+    return result;
 }
+
 
 // Calcola il checksum IP
 string ipChecksum(const string& bits) {
