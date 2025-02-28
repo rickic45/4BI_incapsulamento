@@ -104,7 +104,7 @@ string messaggioToBin(string input) {
 
 // Calcola il checksum IP
 string ipChecksum(const string& bits) {
-    if (bits.size() % 16 != 0) {
+    if (bits.size() % 8 != 0) {
         cerr << "Errore: La stringa di input non è un multiplo di 16 bit." << endl;
         exit(1);
     }
